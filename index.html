@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payback</title>
+  </head>
+  <body>
+    <h1>Cálculo del payback</h1>
+    <h2>Valores nominales</h2>
+    <label>Inversión</label>
+    <input type="text" id="ano0" placeholder="Inversión inicial" />
+    <br />
+    <label>Año 1</label>
+    <input type="text" id="ano1" placeholder="Caja año 1" />
+    <br />
+    <label>Año 2</label>
+    <input type="text" id="ano2" placeholder="Caja año 2" />
+    <br />
+    <label>Año 3</label>
+    <input type="text" id="ano3" placeholder="Caja año 3" />
+    <br />
+    <label>Año 4</label>
+    <input type="text" id="ano4" placeholder="Caja año 4" />
+    <br />
+    <label>Año 5</label>
+    <input type="text" id="ano5" placeholder="Caja año 5" />
+    <br />
+    <br />
+    <label>Tasa Dscto</label>
+    <input type="text" id="tasaDscto" placeholder="Tasa de descuento" />
+    <br /><br />
+    <button id="calcular">calcular payback</button>
+    <br />
+    <h2>Valores ajustados</h2>
+    <label>Año 1</label>
+    <input type="text" id="ano1aj" placeholder="Caja año 1" />
+    <br />
+    <label>Año 2</label>
+    <input type="text" id="ano2aj" placeholder="Caja año 2" />
+    <br />
+    <label>Año 3</label>
+    <input type="text" id="ano3aj" placeholder="Caja año 3" />
+    <br />
+    <label>Año 4</label>
+    <input type="text" id="ano4aj" placeholder="Caja año 4" />
+    <br />
+    <label>Año 5</label>
+    <input type="text" id="ano5aj" placeholder="Caja año 5" />
+    <br />
+    <br />
+    <h2>Valores acumulados</h2>
+    <label>Año 0</label>
+    <input type="text" id="ano0acum" placeholder="Caja año 0" />
+    <br />
+    <label>Año 1</label>
+    <input type="text" id="ano1acum" placeholder="Caja año 1" />
+    <br />
+    <label>Año 2</label>
+    <input type="text" id="ano2acum" placeholder="Caja año 2" />
+    <br />
+    <label>Año 3</label>
+    <input type="text" id="ano3acum" placeholder="Caja año 3" />
+    <br />
+    <label>Año 4</label>
+    <input type="text" id="ano4acum" placeholder="Caja año 4" />
+    <br />
+    <label>Año 5</label>
+    <input type="text" id="ano5acum" placeholder="Caja año 5" />
+    <br />
+    <div class="salida"></div>
+
+    <h1>¿Qué es payback?</h1>
+
+    <p>
+      El payback es el plazo que debes esperar para que el valor de la inversión
+      inicial sea superado por el resultado. Es decir, en cuánto tiempo el
+      emprendimiento llegará al punto de equilibrio.
+    </p>
+
+    <p>
+      Cuanto mayor sea ese plazo, más alto también será el grado de
+      incertidumbre del negocio. Propuestas de inversiones con un plazo menor de
+      retorno tienden a ofrecer mayor liquidez, lo que disminuye el riesgo de
+      quiebra financiera.
+    </p>
+
+    <h1>¿Cómo calcular el payback?</h1>
+
+    <p>
+      Para calcular el payback de una empresa basta sumar los flujos de caja
+      líquidos esperados para cada año hasta que se alcance el valor del costo
+      inicial aplicado para empezar el negocio.
+    </p>
+
+    <p>
+      Cuando las entradas líquidas de caja son uniformes, basta dividir la
+      inversión inicial por las entradas de caja. Sin embargo, esta no es la
+      realidad habitual de la mayoría de las empresas. Como las entradas son
+      desiguales, hay que sumar el valor acumulado, mes a mes, hasta que el
+      retorno sea una realidad.
+    </p>
+
+    <p>
+      Así, anticipas posibles problemas y minimizas los riesgos de sorpresas
+      desagradables en el camino. Al practicar esta planificación estratégica te
+      resultará más fácil atraer inversores externos, que tendrán más
+      informaciones sobre la seguridad de tu negocio.
+    </p>
+
+    <p>
+      Un ejemplo: vamos a suponer que hiciste una inversión inicial de $
+      150.000, tienes un flujo de caja igual de $ 60.000 en cinco años y una
+      tasa de descuentos del 18% al año.
+    </p>
+
+    <p>
+      Ahora debes descontar el porcentaje de cada flujo de caja, a partir de la
+      fórmula (1+0,18)^j, donde “j” es el año que vas a calcular. Para el
+      segundo año, divide $ 60.000 por (1+0,18)^2. El resultado es una caja
+      ajustada de $ 43.091.
+    </p>
+
+    <p>
+      Repite la operación para los próximos años. Observa en la siguiente tabla
+      todos los datos del análisis:
+    </p>
+
+    <table>
+      <tr>
+        <th>Año</th>
+        <th>Caja anual ($)</th>
+        <th>Caja ajustada ($)</th>
+        <th>Caja ajustada acumulada ($)</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>-150.000</td>
+        <td>----</td>
+        <td>-150.000</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>60.000</td>
+        <td>50.847</td>
+        <td>-99.153</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>60.000</td>
+        <td>43.091</td>
+        <td>-56.062</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>60.000</td>
+        <td>36.517</td>
+        <td>-19.545</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>60.000</td>
+        <td>30.947</td>
+        <td>11.402</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>60.000</td>
+        <td>26.226</td>
+        <td>37.628</td>
+      </tr>
+    </table>
+    <p>
+      De acuerdo con los números, el payback queda entre el tercero y el cuarto
+      año, como lo ilustra la caja acumulada ajustada. Para calcular el valor
+      exacto, aplica los datos en la fórmula:
+    </p>
+
+    <p>
+      Payback = año de la última caja negativa - última caja ajustada negativa /
+      primera caja positiva x número total de meses / 10
+    </p>
+
+    <p>Payback = 3 - (-19.545) / 30.947 x 12 / 10</p>
+
+    <p>Payback = 3,8 años</p>
+    <br /><br /><br />
+
+    <script src="main.js"></script>
+  </body>
+</html>
